@@ -1,0 +1,34 @@
+{
+  "name": "Web Annotator App",
+  "description": "Tool to be used with the Web Annotator Extension to allow saving of the annotations to disk",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjPbDxf5pwdMqOJlKSHRR5AolFGo0w8QxEiIlS6xsRBN4rJXLdMIB0fKfpNZS9L5ngulipeQNMRLfjCWC28jn1K2vQ/qbrDAWQRX1WpxQAJa6GW3GZCIHAGmHGtri8w/OMC5jnFe823CQUFpbRbFA1k9EQq9sdoXHiuibrfQavh0+Q7xXBQ0SeShgMcWmPLeiyS5sK5oMivZayB3MPz4a6zvtm0mTPoVvVIfkfii0r8B3h8ET8rm+zIXU3dQYgZagZAeTMXReMv/R1L8wBEHac4gY/o64CNwZ4YQMBVgZ0KA5yy6NZimMDaX1xK/SiMCe8WPf0EXNoE5l7kMJaMVAyQIDAQAB",
+  "minimum_chrome_version": "31",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    {
+      "fileSystem": [
+        "write",
+        "retainEntries",
+        "directory"
+      ]
+    },
+    "storage"
+  ],
+  "file_handlers": {
+    "text": {
+      "types": [
+        "text/*"
+      ]
+    }
+  }
+}
